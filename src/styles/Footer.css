@@ -1,0 +1,45 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--fullBlackColor);
+  color: var(--secondaryGreyColor);
+  text-align: center;
+  padding: 10px;
+}
+
+.footer-information {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.footer-information div {
+  width: 100%;
+}
+
+.footer-information div span {
+  display: block;
+  font-size: var(--nFontSize);
+  color: var(--primaryGreyColor);
+  margin-bottom: 15px;
+}
+
+.footer-information a {
+  text-decoration: none;
+}
+
+.footer-links {
+  display: flex;
+}
+
+.footer-links p {
+  margin: 10px 0;
+}
+
+@media only screen and (min-width: 660px) {
+  .footer-information {
+    flex-direction: row;
+  }
+}

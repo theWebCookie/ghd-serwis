@@ -1,0 +1,43 @@
+.contactInfo {
+  position: relative;
+  background-color: var(--fullBlackColor);
+  width: 350px;
+  color: white;
+  display: none;
+}
+
+.contactInfo div:not(.square) {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 20px 0 20px 30px;
+}
+
+.contactInfo div img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.contactInfo h3 {
+  font-size: var(--mFontSize);
+  font-weight: bold;
+  margin-left: 30px;
+  padding-top: 20px;
+}
+
+.square {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  background-color: var(--primaryColor);
+  transform-origin: center;
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (min-width: 660px) {
+  .contactInfo {
+    display: block;
+  }
+}

@@ -1,10 +1,10 @@
 .contactField {
   all: unset;
   border-bottom: 1px solid var(--primaryGreyColor);
-  padding: 10px;
+  padding: 10px 10px 10px 0;
 }
 
-.contactField:not(.contactGroup textarea) {
+.contactField {
   width: calc(100% - 20px);
 }
 
@@ -15,7 +15,6 @@
 
 .contactGroup textarea:focus {
   height: 200px;
-  width: 300px;
   line-height: 1.5;
 }
 
@@ -28,6 +27,13 @@
   background-color: var(--fullBlackColor);
   cursor: pointer;
   text-align: center;
+  transition: 0.3s;
+  border: none;
+}
+
+.contactField[type="submit"]:hover, .contactField[type="submit"]:focus {
+  background-color: var(--primaryColor);
+  color: var(--fullBlackColor);
 }
 
 .submitted input:invalid, .submitted textarea:invalid{
@@ -42,7 +48,7 @@
   font-size: 0.8em;
   color: red;
   margin-top: 0.5em;
-  margin: 0.5em 10px;
+  margin: 0.5em 0px;
 }
 
 .formWrapper .contactGroup:nth-child(1) {

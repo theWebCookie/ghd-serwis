@@ -1,10 +1,11 @@
-import React from 'react'
-import ContactForm from '../parts/ContactForm';
+import React from 'react';
+import Contact from '../parts/Contact';
 
 const MainPage = () => (
-  <div>Strona główna
-    <ContactForm/>
-  </div>
+  <>
+    <p>Strona główna</p>
+    <Contact/>
+  </>
 )
 
 export default MainPage;

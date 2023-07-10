@@ -14,5 +14,5 @@
   --nFontSize:16px;
   --mFontSize: 20px;
   --lFontSize: 26px;
-  --primaryShadow: drop-shadow(3px 4px 9px rgba(0, 0, 0, 0.25));
+  --primaryShadow: 3px 4px 9px rgba(0, 0, 0, 0.25);
 }

@@ -1,0 +1,53 @@
+.contactField {
+  all: unset;
+  border-bottom: 1px solid var(--primaryGreyColor);
+  padding: 10px;
+}
+
+.contactField:not(.contactGroup textarea) {
+  width: calc(100% - 20px);
+}
+
+.contactGroup textarea {
+  transition: 0.3s;
+  height: 20px;
+}
+
+.contactGroup textarea:focus {
+  height: 200px;
+  width: 300px;
+  line-height: 1.5;
+}
+
+.contactField:focus {
+  border-bottom: 1px solid var(--primaryGreyColor);
+}
+
+.contactField[type="submit"] {
+  color: white;
+  background-color: var(--fullBlackColor);
+  cursor: pointer;
+  text-align: center;
+}
+
+.submitted input:invalid, .submitted textarea:invalid{
+  border-color: red;
+}
+
+.submitted input:invalid:focus, .submitted textarea:invalid:focus {
+  outline-color: red;
+}
+
+.contactGroup div {
+  font-size: 0.8em;
+  color: red;
+  margin-top: 0.5em;
+  margin: 0.5em 10px;
+}
+
+.formWrapper .contactGroup:nth-child(1) {
+  margin-top: 30px
+}
+.formWrapper .contactGroup:nth-child(3) {
+  margin-bottom: 30px
+}

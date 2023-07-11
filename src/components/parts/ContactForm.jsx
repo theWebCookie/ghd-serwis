@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from '@emailjs/browser';
 import Input from './Input';
 import style from '../../styles/ContactForm.css';
 
@@ -14,6 +15,12 @@ const ContactForm = () => {
       const formData = new FormData(form);
       const formJson = Object.fromEntries(formData.entries());
       console.log(formJson);
+      emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_PUBLIC_KEY)
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     }
   };
 
@@ -23,7 +30,7 @@ const ContactForm = () => {
         <Input
           component="input"
           type="text"
-          name="name"
+          name="user_name"
           className="contactField"
           placeholder="Imię i nazwisko"
           required
@@ -31,7 +38,7 @@ const ContactForm = () => {
         <Input
           component="input"
           type="email"
-          name="email"
+          name="user_email"
           className="contactField"
           placeholder="Email"
           required

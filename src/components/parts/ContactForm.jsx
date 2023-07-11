@@ -59,9 +59,6 @@ const ContactForm = () => {
             className="contactField"
             placeholder="Wiadomość"
             required
-            wrap="hard"
-            rows="5"
-            cols="33"
           />
         </div>
         <Input

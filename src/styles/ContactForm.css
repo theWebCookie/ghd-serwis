@@ -11,6 +11,8 @@
 .contactGroup textarea {
   transition: 0.3s;
   height: 20px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 .contactGroup textarea:focus {

@@ -68,7 +68,7 @@
   .mobile {
     display: none;
   }
-  .fa-x, .fa-bars {
+  .x, .bars {
     display: none;
   }
 }

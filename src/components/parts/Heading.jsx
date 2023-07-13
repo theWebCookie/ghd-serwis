@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import "../../styles/Heading.css";
 
 const Heading = ({ content }) => {
   const [text, setText] = useState({ title: "", paragraph: "" });
@@ -18,7 +19,7 @@ const Heading = ({ content }) => {
   }, [content]);
 
   return (
-    <div>
+    <div className="heading">
       <h1>{text.title}</h1>
       <p>{text.paragraph}</p>
     </div>

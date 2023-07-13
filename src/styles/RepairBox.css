@@ -1,0 +1,97 @@
+.repairSection {
+  padding: 20px;
+  margin: 20px 0px;
+}
+
+.repairBoxes {
+  padding: 20px;
+  box-shadow: var(--primaryShadow);
+}
+.repairBox h2 {
+  font-weight: bold;
+  font-size: var(--mFontSize);
+  margin-bottom: 10px;
+}
+
+.repairBox {
+  border-bottom: 1px solid var(--fullBlackColor);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.repairBox:not(.repairBox:nth-child(1)) {
+  margin-top: 20px;
+}
+
+.repairBox-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.repairBox-title button {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  font-size: var(--mFontSize);
+  padding: 0;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
+
+.repairList {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.repairList.open {
+  max-height: 1000px;
+  gap: 10px;
+}
+
+.repairList ul {
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-left: 10px;
+}
+
+.repairList ul li {
+  padding: 5px 0;
+}
+
+.repairPrice {
+  font-weight: bold;
+  color: var(--primaryColor);
+  max-height: 0;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+  text-align: right;
+  margin-bottom: 10px;
+}
+
+.repairPrice.open {
+  max-height: 100%;
+}
+
+@media only screen and (min-width: 660px) {
+  .repairSection {
+    padding: 20px;
+    margin: 20px 10px;
+  }
+
+  .repairList ul li {
+    padding: 2px 0;
+  }
+
+  .repairBox h2 {
+    font-size: var(--lFontSize);
+  }
+
+  .repairPrice {
+    bottom: 15px;
+    right: 25px;
+  }
+}

@@ -1,0 +1,45 @@
+.offertSection {
+  padding: 20px;
+  margin: 20px 10px;
+}
+
+.offertBoxes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.offertBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--primaryShadow);
+  max-width: 250px;
+  height: 350px;
+  padding: 20px;
+}
+
+.offertBox .name {
+  font-weight: bold;
+  font-size: var(--nFontSize);
+}
+
+.price {
+  color: var(--primaryColor);
+  font-weight: bold;
+}
+
+.offertBox div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offertBox a {
+  text-decoration: none;
+  background-color: var(--primaryColor);
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--fullBlackColor);
+}

@@ -43,3 +43,26 @@
   border-radius: 5px;
   color: var(--fullBlackColor);
 }
+
+.offertInput {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchInput {
+  background: url("../assets/OffertPage/search.svg") no-repeat;
+  background-size: 20px;
+  background-position: 10px;
+  background-color: var(--secondaryGreyColor);
+  padding: 10px 10px 10px 40px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+@media only screen and (min-width: 660px) {
+  .searchInput {
+    width: 80%;
+  }
+}

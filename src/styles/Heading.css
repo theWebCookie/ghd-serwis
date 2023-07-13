@@ -1,0 +1,33 @@
+h1 {
+  font-size: var(--headingFontSize);
+  font-weight: bold;
+  position: relative;
+}
+
+.heading {
+  margin-bottom: 20px;
+}
+
+.heading p {
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-top: 3px solid var(--primaryColor);
+  border-left: 3px solid var(--primaryColor);
+  display: none;
+}
+
+@media only screen and (min-width: 660px) {
+  h1::before {
+    display: inline-block;
+  }
+}

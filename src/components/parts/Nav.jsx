@@ -36,9 +36,9 @@ const Nav = () => {
           </NavLink>
         </div>
       {isMobileMenuOpen ? (
-        <i className='fa-solid fa-x' onClick={handleNavBarClick}></i>
+        <i className='fa-solid fa-x x' onClick={handleNavBarClick}></i>
         ) : (
-            <i className='fa-solid fa-bars' onClick={handleNavBarClick}></i>
+            <i className='fa-solid fa-bars bars' onClick={handleNavBarClick}></i>
         )}
     </nav>
   );

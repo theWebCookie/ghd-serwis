@@ -2,15 +2,7 @@ import React from 'react'
 import { useQuery } from "graphql-hooks";
 import Heading from '../parts/Heading';
 import RepairBox from '../parts/RepairBox';
-
-const REPAIR_QUERY = `query MyQuery {
-  allRepairs {
-    cena
-    id
-    lista
-    nazwa
-  }
-}`;
+import { REPAIR_QUERY } from '../../queries/repairQuery';
 
 const RepairPage = () => {
   const { data } = useQuery(REPAIR_QUERY);

@@ -7,30 +7,31 @@ import style from '../../styles/ContactForm.css';
 const ContactForm = () => {
   const [alertMessage, setAlertMessage] = useState("");
   const [showAlert, setShowAlert] = useState(false);
+
   const handleFormSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const isValid = form.checkValidity();
+
     form.classList.add('submitted');
     const invalidField = form.querySelector(':invalid');
     invalidField?.focus();
-    if (isValid) {
-      const formData = new FormData(form);
-      const formJson = Object.fromEntries(formData.entries());
-      console.log(formJson);
-      emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_PUBLIC_KEY)
-      .then(() => {
-          setAlertMessage("success");
-          setShowAlert(true);
-      }, () => {
-          setAlertMessage("failure");
-          setShowAlert(true);
-      });
 
-      setTimeout(() => {
-        setShowAlert(false);
-      }, 5000);
-    }
+    if (!isValid) return;
+
+    emailjs
+    .sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_PUBLIC_KEY)
+    .then(() => {
+        setAlertMessage("success");
+        setShowAlert(true);
+    }, () => {
+        setAlertMessage("failure");
+        setShowAlert(true);
+    });
+
+    setTimeout(() => {
+      setShowAlert(false);
+    }, 5000);
   };
 
   return (

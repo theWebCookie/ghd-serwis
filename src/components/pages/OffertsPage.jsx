@@ -1,22 +1,21 @@
-import React from 'react'
+import React from 'react';
 import useOffertsPage from '../../hooks/useOffertsPage';
 import Heading from '../parts/Heading';
 import OffertBox from '../parts/OffertBox';
 import '../../styles/OffertBox.css';
 
 const OffertsPage = () => {
-  const {filteredOfferts, handleInputChange } = useOffertsPage();
+  const { filteredOfferts, handleInputChange } = useOffertsPage();
+  const isLoading = !filteredOfferts;
 
   return (
-    <div className="offertSection">
-      <Heading content="offert" />
-      <div className="offertInput">
-        <input type="text" name="searchInput" placeholder="Szukaj..." className="searchInput" onChange={handleInputChange} />
+    <div className='offertSection'>
+      <Heading content='offert' />
+      <div className='offertInput'>
+        <input type='text' name='searchInput' placeholder='Szukaj...' className='searchInput' onChange={handleInputChange} />
       </div>
-      <div className="offertBoxes">
-        {filteredOfferts.map((offert) => (
-          <OffertBox key={offert.id} data={offert} />
-        ))}
+      <div className='offertBoxes'>
+        {isLoading ? <p>Ładowanie ofert...</p> : filteredOfferts.map((offert) => <OffertBox key={offert.id} data={offert} />)}
       </div>
     </div>
   );

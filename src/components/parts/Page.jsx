@@ -1,13 +1,11 @@
-import React from 'react'
-import Nav from './Nav'
+import React from 'react';
 import Footer from './Footer';
 
-const Page = ({children}) => (
+const Page = ({ children }) => (
   <>
-    <Nav/>
     <main>{children}</main>
-    <Footer/>
+    <Footer />
   </>
-)
+);
 
 export default Page;

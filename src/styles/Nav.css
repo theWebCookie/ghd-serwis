@@ -68,7 +68,8 @@
   .mobile {
     display: none;
   }
-  .x, .bars {
+  .x,
+  .bars {
     display: none;
   }
 }

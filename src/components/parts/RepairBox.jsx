@@ -11,12 +11,12 @@ const RepairBox = ({ data }) => {
   const { nazwa, cena, lista } = data;
 
   return (
-    <div className="repairBox">
-      <div className="repairBox-title">
+    <div className='repairBox'>
+      <div className='repairBox-title'>
         <h2>{nazwa}</h2>
         <div>
           <button onClick={handleListButtonClick}>
-            {isListOpen ? <i className="fa-solid fa-x"></i> : <i className="fa-solid fa-chevron-down"></i>}
+            {isListOpen ? <i className='fa-solid fa-x'></i> : <i className='fa-solid fa-chevron-down'></i>}
           </button>
         </div>
       </div>
@@ -26,9 +26,9 @@ const RepairBox = ({ data }) => {
             <li key={`${item}_${index}`}>{item}</li>
           ))}
         </ul>
-      </div>
-      <div className={`repairPrice ${isListOpen ? 'open' : ''}`}>
-        <h3>Cena: {cena}zł</h3>
+        <div className={`repairPrice ${isListOpen ? 'open' : ''}`}>
+          <h3>Cena: {cena}zł</h3>
+        </div>
       </div>
     </div>
   );

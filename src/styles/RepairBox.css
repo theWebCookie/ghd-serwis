@@ -48,8 +48,9 @@
 }
 
 .repairList.open {
-  max-height: 1000px;
-  gap: 10px;
+  max-height: unset;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding: 10px 0;
 }
 
 .repairList ul {

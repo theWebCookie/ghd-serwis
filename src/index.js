@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import {createBrowserRouter, RouterProvider,} from "react-router-dom";
-import { GraphQLClient, ClientContext } from 'graphql-hooks'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { GraphQLClient, ClientContext } from 'graphql-hooks';
 import App from './App';
 import './index.css';
 import MainPage from './components/pages/MainPage';
@@ -10,31 +10,31 @@ import OffertsPage from './components/pages/OffertsPage';
 import RegulationsPage from './components/pages/RegulationsPage';
 
 const client = new GraphQLClient({
-  url: "https://graphql.datocms.com/",
+  url: 'https://graphql.datocms.com/',
   headers: {
-    "Authorization": `Bearer ${process.env.REACT_APP_API_TOKEN}`,
-  }
+    Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+  },
 });
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
     children: [
       {
-        path: "/",
+        path: '/',
         element: <MainPage />,
       },
       {
-        path: "/naprawa",
+        path: '/naprawa',
         element: <RepairPage />,
       },
       {
-        path: "/zakup",
+        path: '/zakup',
         element: <OffertsPage />,
       },
       {
-        path: "/regulamin",
+        path: '/regulamin',
         element: <RegulationsPage />,
       },
     ],

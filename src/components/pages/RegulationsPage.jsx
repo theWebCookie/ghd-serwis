@@ -1,7 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Nav from '../parts/Nav';
 
 const RegulationsPage = () => (
-  <div>Regulamin</div>
-)
+  <>
+    <Nav />
+    <div>Regulamin</div>
+  </>
+);
 
 export default RegulationsPage;

@@ -31,6 +31,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgba(48, 44, 44, 0.511);
+  padding: 50px;
 }
 
 .hero-nav {

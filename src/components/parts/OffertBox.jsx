@@ -6,14 +6,18 @@ const OffertBox = ({ data }) => {
   const { responsiveImage } = zdjecie;
   return (
     <div className='offertBox'>
-      <img src={responsiveImage.src} alt={responsiveImage.alt} loading='lazy' />
-      <div>
-        <span className='name'>{nazwa}</span>
-        <span className='price'>{cena}zł</span>
+      <div className='image'>
+        <img src={responsiveImage.src} alt={responsiveImage.alt} loading='lazy' />
       </div>
-      <div>
-        <span>Zużycie: {zuzycie}</span>
-        <Link to={link}>Sprawdź</Link>
+      <div className='details'>
+        <div>
+          <span className='name'>{nazwa}</span>
+          <span className='price'>{cena}zł</span>
+        </div>
+        <div>
+          <span>Zużycie: {zuzycie}</span>
+          <Link to={link}>Sprawdź</Link>
+        </div>
       </div>
     </div>
   );

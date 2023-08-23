@@ -17,6 +17,7 @@ const MainPage = () => (
             <h1>Nieautoryzowany serwis marki GHD</h1>
             <p>Naprawiamy urządzenie beauty firmy God hair Day</p>
             <hr />
+            <i className='fa-solid fa-arrow-right'></i>
           </div>
         </div>
       </div>

@@ -34,6 +34,25 @@
   padding: 50px;
 }
 
+.hero-text i {
+  position: relative;
+  top: 15px;
+  transform: rotate(90deg);
+  animation: beat 0.5s infinite alternate linear;
+}
+
+@keyframes beat {
+  from {
+    opacity: 1;
+    top: 15px;
+  }
+
+  to {
+    top: 25px;
+    opacity: 0;
+  }
+}
+
 .hero-nav {
   width: 100%;
 }

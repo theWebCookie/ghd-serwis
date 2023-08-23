@@ -46,6 +46,12 @@
   transition: 0.3s;
 }
 
+.mobile div {
+  position: absolute;
+  top: 20px;
+  left: 25px;
+}
+
 .mobile.open {
   transform: translateY(100%);
 }

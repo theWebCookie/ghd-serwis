@@ -36,6 +36,7 @@ const ContactForm = () => {
       setAlertMessage('success');
       form.reset();
     } catch (error) {
+      console.error(error);
       setAlertMessage('error');
     }
   };

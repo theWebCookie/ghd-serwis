@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import Input from './Input';
 import Alert from './Alert';
@@ -9,12 +9,22 @@ const ContactForm = () => {
   const [showAlert, setShowAlert] = useState(false);
   const formRef = useRef(null);
 
+  useEffect(() => {
+    if (alertMessage === 'success' || alertMessage === 'error') {
+      const timer = setTimeout(() => {
+        setAlertMessage(null);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [alertMessage]);
+
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    setAlertMessage('pending');
+    setShowAlert(true);
 
     const form = formRef.current;
     const isValid = form.checkValidity();
-
     form.classList.add('submitted');
     const invalidField = form.querySelector(':invalid');
     invalidField?.focus();
@@ -24,16 +34,10 @@ const ContactForm = () => {
     try {
       await emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_PUBLIC_KEY);
       setAlertMessage('success');
+      form.reset();
     } catch (error) {
-      setAlertMessage('failure');
-    } finally {
-      setShowAlert(true);
-      setTimeout(() => {
-        setShowAlert(false);
-      }, 5000);
+      setAlertMessage('error');
     }
-
-    form.reset();
   };
 
   return (

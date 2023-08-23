@@ -1,6 +1,6 @@
 .alert {
-  position: absolute;
-  bottom: 110%;
+  position: fixed;
+  top: 0;
   left: 0;
   width: 100%;
   padding: 1rem 1rem;
@@ -10,7 +10,7 @@
   z-index: 12;
 }
 
-.failure {
+.error {
   color: #842029;
   background-color: #f8d7da;
   border-color: #f5c2c7;
@@ -20,4 +20,10 @@
   color: #0f5132;
   background-color: #d1e7dd;
   border-color: #badbcc;
+}
+
+.pending {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
 }

@@ -34,6 +34,10 @@
   padding: 50px;
 }
 
+.hero-text h1 {
+  margin-bottom: 10px;
+}
+
 .hero-text i {
   position: relative;
   top: 15px;
@@ -111,5 +115,20 @@
 
   .main-info div p {
     max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .hero-text {
+    padding: 10px;
+  }
+  .hero-text h1 {
+    font-size: var(--lFontSize);
+  }
+}
+
+@media only screen and (max-width: 220px) {
+  .hero-nav .nav {
+    padding: 0 5px;
   }
 }

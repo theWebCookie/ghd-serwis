@@ -1,0 +1,24 @@
+.markdown {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  line-height: 1.5;
+}
+
+.markdown h1 {
+  margin-bottom: 10px;
+}
+
+.markdown h2 {
+  font-weight: 500;
+  font-size: var(--lFontSize);
+}
+
+.markdown ol,
+ul {
+  margin-left: 35px;
+}
+
+.markdown ul {
+  margin-left: 50px;
+}

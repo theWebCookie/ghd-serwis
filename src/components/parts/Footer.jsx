@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import karta from '../../assets/Footer/Karta-Gwarancyjna.pdf';
-import '../../styles/Footer.css'
+import '../../styles/Footer.css';
 
 const Footer = () => (
   <footer className='footer'>
@@ -17,21 +17,29 @@ const Footer = () => (
       </div>
       <div>
         <span>Paczkomat Inpost</span>
-        <p>LOD30M OZO03M</p>
+        <p>LOD30M SOLW01M</p>
       </div>
       <div className='footer-links'>
         <div>
-          <p><Link to='/naprawa'><span>Naprawa</span></Link></p>
-          <p><Link to='/zakup'><span>Zakup</span></Link></p>
+          <p>
+            <Link to='/naprawa'>
+              <span>Naprawa</span>
+            </Link>
+          </p>
+          <p>
+            <Link to='/zakup'>
+              <span>Zakup</span>
+            </Link>
+          </p>
         </div>
         <div>
-          <p><Link to='/regulamin'><span>Regulamin</span></Link></p>
           <p>
-            <Link to={karta} 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            download="Karta gwarancyjna"
-            >
+            <Link to='/regulamin'>
+              <span>Regulamin</span>
+            </Link>
+          </p>
+          <p>
+            <Link to={karta} target='_blank' rel='noopener noreferrer' download='Karta gwarancyjna'>
               <span>Karta gwarancyjna</span>
             </Link>
           </p>
@@ -40,6 +48,6 @@ const Footer = () => (
     </div>
     <div>© GHD-service | 2023</div>
   </footer>
-)
+);
 
 export default Footer;

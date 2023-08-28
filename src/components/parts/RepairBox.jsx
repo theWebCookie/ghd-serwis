@@ -8,10 +8,10 @@ const RepairBox = ({ data }) => {
     setIsListOpen(!isListOpen);
   };
 
-  const { nazwa, cena, lista } = data;
+  const { nazwa, lista } = data;
 
   return (
-    <div className='repairBox'>
+    <div className='repairBox' onClick={handleListButtonClick}>
       <div className='repairBox-title'>
         <h2>{nazwa}</h2>
         <div>
@@ -26,9 +26,6 @@ const RepairBox = ({ data }) => {
             <li key={`${item}_${index}`}>{item}</li>
           ))}
         </ul>
-        <div className={`repairPrice ${isListOpen ? 'open' : ''}`}>
-          <h3>Cena: {cena}zł</h3>
-        </div>
       </div>
     </div>
   );

@@ -43,6 +43,7 @@
   top: 15px;
   transform: rotate(90deg);
   animation: beat 0.5s infinite alternate linear;
+  cursor: pointer;
 }
 
 @keyframes beat {

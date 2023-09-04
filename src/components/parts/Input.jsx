@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-const Input = ({ component, name, placeholder, className, ...props }) => {
+const Input = ({ component, type, ...props }) => {
   const [validationMessage, setValidationMessage] = useState('');
 
   const handleValidation = (e) => {
@@ -11,7 +12,7 @@ const Input = ({ component, name, placeholder, className, ...props }) => {
   const onBlur = (e) => {
     const target = e.target;
 
-    if (!!validationMessage) {
+    if (validationMessage) {
       setValidationMessage(target.validationMessage);
     }
   };
@@ -20,15 +21,16 @@ const Input = ({ component, name, placeholder, className, ...props }) => {
 
   return (
     <div className='contactGroup'>
-      <Component
-        name={name}
-        onInvalid={handleValidation}
-        onBlur={onBlur}
-        placeholder={placeholder}
-        className={className}
-        {...props}
-      />
-      {!!validationMessage && <div>{validationMessage}</div>}
+      <Component onInvalid={handleValidation} onBlur={onBlur} type={type} {...props} />
+      {type === 'checkbox' && (
+        <label htmlFor='rodo'>
+          Akcpetuję{' '}
+          <Link to='/regulamin'>
+            <span>politykę prywatności</span>
+          </Link>
+        </label>
+      )}
+      {validationMessage && <div>{validationMessage}</div>}
     </div>
   );
 };

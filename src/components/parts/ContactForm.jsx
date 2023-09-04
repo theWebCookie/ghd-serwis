@@ -20,8 +20,6 @@ const ContactForm = () => {
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
-    setAlertMessage('pending');
-    setShowAlert(true);
 
     const form = formRef.current;
     const isValid = form.checkValidity();
@@ -30,6 +28,9 @@ const ContactForm = () => {
     invalidField?.focus();
 
     if (!isValid) return;
+
+    setAlertMessage('pending');
+    setShowAlert(true);
 
     try {
       await emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form, process.env.REACT_APP_PUBLIC_KEY);
@@ -48,6 +49,7 @@ const ContactForm = () => {
           <Input component='input' type='text' name='user_name' className='contactField' placeholder='Imię i nazwisko' required />
           <Input component='input' type='email' name='user_email' className='contactField' placeholder='Email' required />
           <Input component='textarea' name='message' className='contactField' placeholder='Wiadomość' required />
+          <Input component='input' type='checkbox' id='rodo' required />
         </div>
         <Input component='input' type='submit' className='contactField' value='Wyślij' />
       </form>

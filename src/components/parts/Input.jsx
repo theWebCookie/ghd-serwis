@@ -24,7 +24,7 @@ const Input = ({ component, type, ...props }) => {
       <Component onInvalid={handleValidation} onBlur={onBlur} type={type} {...props} />
       {type === 'checkbox' && (
         <label htmlFor='rodo'>
-          Akcpetuję{' '}
+          Akceptuję{' '}
           <Link to='/regulamin'>
             <span>politykę prywatności</span>
           </Link>
